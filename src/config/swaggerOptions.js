@@ -11,7 +11,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "https://tunga-final-project-clsu.onrender.com",
+        url: "https://tunga-final-project-clsu.onrender.com/api",
         description: "Development server",
       },
     ],
