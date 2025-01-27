@@ -67,7 +67,7 @@ const router = express.Router();
  *             $ref: '#/components/schemas/Post'
  *     responses:
  *       201:
- *         description: Post created successfully
+ *         description: Post created successfully, returns created post object
  *       400:
  *         description: Invalid request body
  *       401:

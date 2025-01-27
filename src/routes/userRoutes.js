@@ -66,7 +66,7 @@ router.post("/register", register);
  *                 description: Password for the account
  *     responses:
  *       200:
- *         description: Login successful, returns a JWT token
+ *         description: Login successful, returns a JWT token and logged in user
  *       400:
  *         description: Bad request
  *       401:

@@ -32,7 +32,8 @@ const login = async (req, res, next) => {
     }
 
     const token = generateToken(user.id, user.role);
-    res.status(200).json({ token });
+    const { name, role } = user;
+    res.status(200).json({ token, user: { id: user.id, name, email, role } });
   } catch (error) {
     next(error); // Pass errors to the error handler middleware
   }
