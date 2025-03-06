@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-// Define the User schema
 const UserSchema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
@@ -11,7 +10,9 @@ const UserSchema = new Schema({
     enum: ["Admin", "Author", "Reader"],
     default: "Reader",
   },
+  isVerified: { type: Boolean, default: false },
+  resetToken: { type: String },
+  resetTokenExpires: { type: Date },
 });
 
-// Export the model
 module.exports = mongoose.model("User", UserSchema);

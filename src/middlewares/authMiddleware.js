@@ -1,4 +1,4 @@
-const jwt = require("jsonwebtoken");
+const { verifyToken } = require("../utils/auth");
 
 /**
  * @typedef {Object} UserPayload
@@ -20,7 +20,7 @@ const authMiddleware = (roles) => {
         return; // Exit after sending the response
       }
 
-      const decoded = jwt.verify(token, process.env.JWT_SECRET); // Decode the token
+      const decoded = verifyToken(token); // Decode the token
 
       req.body.user = decoded;
 
