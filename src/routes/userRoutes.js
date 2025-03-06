@@ -16,7 +16,7 @@ const router = express.Router();
  *   post:
  *     summary: Register a new user
  *     tags:
- *       - Users
+ *       - Auth
  *     requestBody:
  *       required: true
  *       content:
@@ -57,7 +57,7 @@ router.post("/register", register);
  *   post:
  *     summary: User login
  *     tags:
- *       - Users
+ *       - Auth
  *     requestBody:
  *       required: true
  *       content:
@@ -83,7 +83,7 @@ router.post("/login", login);
 
 /**
  * @swagger
- * /auth/forgot-password:
+ * /users/forgot-password:
  *   post:
  *     summary: Request a password reset
  *     tags:
@@ -110,7 +110,7 @@ router.post("/forgot-password", forgotPassword);
 
 /**
  * @swagger
- * /auth/reset-password:
+ * /users/reset-password:
  *   post:
  *     summary: Reset password using token
  *     tags:
@@ -141,7 +141,7 @@ router.post("/reset-password", resetPassword);
 
 /**
  * @swagger
- * /auth/send-verification:
+ * /users/send-verification:
  *   post:
  *     summary: Request an email verification link
  *     tags:
@@ -170,7 +170,7 @@ router.post("/send-verification", sendVerificationEmail);
 
 /**
  * @swagger
- * /auth/verify-email:
+ * /users/verify-email:
  *   post:
  *     summary: Verify email using token
  *     tags:
